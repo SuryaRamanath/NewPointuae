@@ -31,7 +31,7 @@ section {
 }
 
 .navbar {
-  z-index: 888;
+  z-index: 988;
   position: fixed;
   background-color: #222;
   top: 0;
@@ -108,7 +108,7 @@ section {
   z-index: 777;
   content: '';
   position: absolute;
-  background-color: rgba(0, 38, 255, 0.226);
+  background-color: rgba(89, 54, 247, 0.158);
   width: 100%;
   height: 100%;
   top: 0;
@@ -129,12 +129,30 @@ section {
 .hero .image-slide {
   position: absolute;
   width: 100%;
+  -webkit-clip-path: circle(0% at 0 50%);
+          clip-path: circle(0% at 0 50%);
+}
+
+.hero .image-slide.active {
+  -webkit-clip-path: circle(150% at 0 50%);
+          clip-path: circle(150% at 0 50%);
+  -webkit-transition: 2s ease;
+  transition: 2s ease;
+  -webkit-transition-property: -webkit-clip-path;
+  transition-property: -webkit-clip-path;
+  transition-property: clip-path;
+  transition-property: clip-path, -webkit-clip-path;
 }
 
 .hero .content {
   z-index: 888;
   width: 70%;
   margin-top: 50px;
+  display: none;
+}
+
+.hero .content.active {
+  display: block;
 }
 
 .hero .content h1 {
@@ -144,6 +162,13 @@ section {
   letter-spacing: 5px;
   line-height: 75px;
   margin-bottom: 40px;
+  color: white;
+}
+
+@media (max-width: 767px) {
+  .hero .content h1 {
+    font-size: 2.5rem;
+  }
 }
 
 .hero .slider-navigation {
@@ -186,5 +211,48 @@ section {
 
 .hero .slider-navigation .nav-btn.active {
   background-color: blue;
+}
+
+.hero .arrow {
+  z-index: 999;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.432);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.hero .arrow:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.hero .arrow i {
+  position: relative;
+  font-size: 40px;
+}
+
+.hero .slider-left-arrow {
+  left: 10px;
+}
+
+.hero .slider-right-arrow {
+  right: 10px;
 }
 /*# sourceMappingURL=style.css.map */
