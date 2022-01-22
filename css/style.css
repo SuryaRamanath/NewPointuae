@@ -31,7 +31,7 @@ section {
 }
 
 .navbar {
-  z-index: 988;
+  z-index: 1088;
   position: fixed;
   background-color: #222;
   top: 0;
@@ -228,35 +228,6 @@ section {
   background-color: blue;
 }
 
-<<<<<<< HEAD
-.about h2 {
-  font-size: 2rem;
-  margin: 20px 0;
-}
-
-.about p {
-  color: #555;
-  line-height: 30px;
-  letter-spacing: 1.2px;
-}
-
-.about button {
-  background-color: #1d5854;
-  color: #fff;
-  border: 1px #1d5854 solid;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  padding: 20px 30px;
-  overflow: hidden;
-  margin: 10px 0;
-  position: relative;
-}
-
-.about button:hover {
-  background: transparent;
-  color: black;
-=======
 .hero .arrow {
   z-index: 999;
   width: 60px;
@@ -298,6 +269,34 @@ section {
 
 .hero .slider-right-arrow {
   right: 10px;
->>>>>>> 272e20b972e8ae4bcf48d3404d4d381995981bf8
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+.about p {
+  color: #555;
+  line-height: 30px;
+  letter-spacing: 1.2px;
+}
+
+.about button {
+  background-color: #1d5854;
+  color: #fff;
+  border: 1px #1d5854 solid;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 20px 30px;
+  overflow: hidden;
+  margin: 10px 0;
+  position: relative;
+}
+
+.about button:hover {
+  background: transparent;
+  color: black;
 }
 /*# sourceMappingURL=style.css.map */
