@@ -12,6 +12,16 @@ a {
   text-decoration: none;
 }
 
+section {
+  padding: 100px 200px;
+}
+
+@media (max-width: 1040px) {
+  section {
+    padding: 100px 20px;
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -21,6 +31,7 @@ a {
 }
 
 .navbar {
+  z-index: 888;
   position: fixed;
   background-color: #222;
   top: 0;
@@ -75,5 +86,105 @@ a {
 .navbar .container ul a:hover {
   color: #3a7dbb;
   font-weight: bold;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.hero::before {
+  z-index: 777;
+  content: '';
+  position: absolute;
+  background-color: rgba(0, 38, 255, 0.226);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.hero img {
+  z-index: 000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.hero .image-slide {
+  position: absolute;
+  width: 100%;
+}
+
+.hero .content {
+  z-index: 888;
+  width: 70%;
+  margin-top: 50px;
+}
+
+.hero .content h1 {
+  font-size: 4em;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  line-height: 75px;
+  margin-bottom: 40px;
+}
+
+.hero .slider-navigation {
+  z-index: 888;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateY(80px);
+          transform: translateY(80px);
+  margin-bottom: 12px;
+}
+
+.hero .slider-navigation .nav-btn {
+  width: 12px;
+  height: 12px;
+  background-color: #FFF;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+          box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.hero .slider-navigation .nav-btn:not(:last-child) {
+  margin-right: 20px;
+}
+
+.hero .slider-navigation .nav-btn:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.hero .slider-navigation .nav-btn.active {
+  background-color: blue;
 }
 /*# sourceMappingURL=style.css.map */

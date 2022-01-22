@@ -10,7 +10,15 @@ a {
     text-decoration: none;
 }
 
+section{
+    padding: 100px 200px;
+
+    @media(max-width: 1040px){
+        padding: 100px 20px;
+    }
+}
 
 @import 'navbar';
 @import 'hero';
 @import 'footer';
+@import 'about';
