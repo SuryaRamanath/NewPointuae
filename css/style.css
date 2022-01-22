@@ -88,6 +88,21 @@ section {
   font-weight: bold;
 }
 
+.navbar.active {
+  background-color: #fff;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar.active ul a {
+  color: black;
+}
+
+.navbar.active .container {
+  height: 80px;
+  padding: 5px 0;
+}
+
 .hero {
   position: relative;
   width: 100%;
@@ -186,5 +201,34 @@ section {
 
 .hero .slider-navigation .nav-btn.active {
   background-color: blue;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+.about p {
+  color: #555;
+  line-height: 30px;
+  letter-spacing: 1.2px;
+}
+
+.about button {
+  background-color: #1d5854;
+  color: #fff;
+  border: 1px #1d5854 solid;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 20px 30px;
+  overflow: hidden;
+  margin: 10px 0;
+  position: relative;
+}
+
+.about button:hover {
+  background: transparent;
+  color: black;
 }
 /*# sourceMappingURL=style.css.map */
