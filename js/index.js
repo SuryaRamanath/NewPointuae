@@ -59,7 +59,7 @@ leftBtn.addEventListener("click", () => {
     sliderNav((sliderIndex - 1)%slides.length)
     sliderIndex = (sliderIndex-1)%slides.length
 })
-// window.setInterval(function(){
-//     sliderNav(sliderIndex);
-//     sliderIndex = (sliderIndex + 1) % slides.length
-// }, 4000);
+window.setInterval(function(){
+    sliderNav(sliderIndex);
+    sliderIndex = (sliderIndex + 1) % slides.length
+}, 5000);

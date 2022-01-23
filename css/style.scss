@@ -10,6 +10,32 @@ a {
     text-decoration: none;
 }
 
+/* Scrollbar  */
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  @media(max-width: 676px){
+    ::-webkit-scrollbar {
+        width: 2px;
+      }
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #000000;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #000000;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #42110d;
+  }
+  
 section{
     padding: 100px 200px;
 
@@ -18,7 +44,14 @@ section{
     }
 }
 
+.section-title{
+  color: green;
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
 @import 'navbar';
 @import 'hero';
 @import 'footer';
 @import 'about';
+@import 'services';
