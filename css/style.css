@@ -305,6 +305,114 @@ section {
   right: 10px;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  background-color: #0a0a07;
+  width: 100%;
+  bottom: 0;
+  background: -webkit-gradient(linear, left top, right top, from(black), to(#1d5854));
+  background: linear-gradient(to right, black, #1d5854);
+  color: white;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  font-size: 13px;
+  line-height: 20px;
+  text-align: center;
+}
+
+footer hr {
+  width: 80%;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  margin: 20px auto;
+}
+
+footer .footer-container {
+  width: 80vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+}
+
+footer .footer-container .row {
+  width: 80vw;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 100px;
+}
+
+footer .footer-container .row .col {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  text-align: start;
+}
+
+footer .footer-container .row .col img {
+  width: 100px;
+  height: auto;
+}
+
+footer .footer-container .row .col li {
+  list-style: none;
+}
+
+footer .footer-container .row .col .contact-form form {
+  -webkit-transition: all 4s ease-in-out;
+  transition: all 4s ease-in-out;
+}
+
+footer .footer-container .row .col .contact-form form .form-control {
+  width: 400px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid grey;
+  color: #fff;
+  font-size: 12px;
+}
+
+footer .footer-container .row .col .contact-form form input {
+  height: 45px;
+}
+
+footer .footer-container .row .col .contact-form form .submit {
+  background: #3a7dbb;
+  border-color: transparent;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  height: 30px;
+  margin-top: 20px;
+}
+
+footer .footer-container .row .col .contact-form form .submit:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+
 .about p {
   color: #555;
   line-height: 30px;
