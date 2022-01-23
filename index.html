@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Document</title>
 </head>
 <body>
@@ -93,12 +94,20 @@
 
     
     <section class="services" id="services">
-        <h2 class="section-title">Services</h2>
+        <h2 class="section-title light">Services</h2>
         <div class="service-container">
             <div class="service-images">
                 <img src="./images/services1.png" alt="">
             </div>
-            <div class="service-content">
+            <div class="service-content"  
+            data-aos="slide-left"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="true"
+            data-aos-anchor-placement="top-center">
                 <ul>
                     <li>CAT LADDERS, CAGE LADDERS</li>
                     <li>HANDRAILS</li>
@@ -115,8 +124,44 @@
                     <li>MEZZANINE FLOOR / SHED</li>
                 </ul>
             </div>
+            <div class="service-content"
+            data-aos="slide-right"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="true"
+            data-aos-anchor-placement="top-center"
+            >
+                <ul>
+                    <li>CAR PARKING SHED</li>
+                    <li>GLASS HANDRAILS</li>
+                    <li>ALUMINIUM AND GLASS
+                        PARTITIONS</li>
+                    <li>CARPENTRY</li>
+                    <li>ROLLING AND BENDING</li>
+                    <li>GYPSUM PARTITION</li>
+                    <li>FLOOR PARQUET</li>
+                    <li>KITCHEN EQUIPMENTS</li>
+                    <li>ANCHOR BOLTS &
+                        FASTENERS</li>
+                </ul>
+            </div>
+            <div class="service-images">
+                <img src="./images/services1.png" alt="">
+            </div>
         </div>
     </section>
+
+
+    <section class="about" id="about">
+        <h2 class="section-title">About Us</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates natus doloribus eius possimus quae, facere, quis similique et doloremque sed minus magnam. Tenetur reiciendis ut odio error qui. Dolores repellendus quaerat optio autem. Voluptatem aperiam optio necessitatibus, quae neque ad maiores, mollitia libero, delectus fugiat nesciunt tempore facere voluptas quos enim perferendis ipsa reprehenderit! Quas, suscipit labore sint et amet doloremque, nobis recusandae ad corrupti ab enim quidem. Molestias laboriosam veritatis sed enim odit amet deleniti error cumque, dolor optio harum architecto fugit quos quasi in non animi quis. Quae totam excepturi repellat laudantium corporis aut autem deleniti veritatis esse!</p>
+        <button>Know More</button>
+    </section>
+
+
 
     <footer>
         <div class="footer-container">
@@ -164,5 +209,9 @@
     </footer>
 
     <script src="./js/index.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>

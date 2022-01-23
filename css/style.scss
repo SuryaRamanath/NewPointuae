@@ -1,6 +1,13 @@
-*{
-    padding: 0;
-    margin: 0;
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+body{
+  color: #eee;
 }
 li {
     list-style: none;
@@ -45,9 +52,35 @@ section{
 }
 
 .section-title{
-  color: green;
-  font-size: 2rem;
-  margin: 20px 0;
+    text-align: center;
+    font-size:2rem; 
+    font-weight:300; 
+    color:#11484c; 
+    letter-spacing:1px;
+    text-transform: uppercase;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: 27px 0;
+    grid-gap: 20px;
+    align-items: center;
+
+    &.light{
+      color: #fff;
+    }
+}
+  
+.section-title:after,.section-title:before {
+    content: " ";
+    display: block;
+    border-bottom: 1px solid #11484c;
+    border-top: 1px solid #11484c;
+    height: 5px;
+    background-color: inherit;
+
+}
+.light:after, .light::before{
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid #fff;
 }
 
 @import 'navbar';

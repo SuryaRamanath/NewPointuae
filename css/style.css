@@ -1,8 +1,16 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 * {
-  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #eee;
 }
 
 li {
@@ -51,23 +59,47 @@ section {
 }
 
 .section-title {
-  color: green;
+  text-align: center;
   font-size: 2rem;
-  margin: 20px 0;
+  font-weight: 300;
+  color: #11484c;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr max-content 1fr;
+      grid-template-columns: 1fr -webkit-max-content 1fr;
+      grid-template-columns: 1fr max-content 1fr;
+  -ms-grid-rows: 27px 0;
+      grid-template-rows: 27px 0;
+  grid-gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Open Sans", sans-serif;
+.section-title.light {
+  color: #fff;
+}
+
+.section-title:after, .section-title:before {
+  content: " ";
+  display: block;
+  border-bottom: 1px solid #11484c;
+  border-top: 1px solid #11484c;
+  height: 5px;
+  background-color: inherit;
+}
+
+.light:after, .light::before {
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid #fff;
 }
 
 .navbar {
   z-index: 1088;
   position: fixed;
-  background-color: #222;
+  background-color: rgba(0, 0, 0, 0.767);
   top: 0;
   left: 0;
   right: 0;
@@ -87,7 +119,7 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px 0;
+  padding: 10px 0;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -123,13 +155,13 @@ section {
 }
 
 .navbar.active {
-  background-color: #fff;
+  background-color: #222;
   -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
           box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .navbar.active ul a {
-  color: black;
+  color: white;
 }
 
 .navbar.active .container {
@@ -305,13 +337,6 @@ section {
   right: 10px;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 footer {
   background-color: #0a0a07;
   width: 100%;
@@ -438,22 +463,16 @@ footer .footer-container .row .col .contact-form form .submit:hover {
 }
 
 .services {
-  background-color: black;
-  min-height: 100vh;
+  background-color: #222;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .services .service-container {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.services .service-container .service-images {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -463,15 +482,60 @@ footer .footer-container .row .col .contact-form form .submit:hover {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 767px) {
+  .services .service-container {
+    padding: 20px;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+  }
+}
+
+.services .service-container .service-images {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.services .service-container .service-images img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 767px) {
+  .services .service-container .service-images {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+  }
 }
 
 .services .service-container .service-content {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  background-color: #166d3b;
+  background: -webkit-gradient(linear, left top, right top, from(#061404), to(#1d5854));
+  background: linear-gradient(to right, #061404, #1d5854);
   padding: 50px;
   color: #fff;
   width: 700px;
   border: 2px solid #222;
-  position: absolute;
-  left: 40%;
+  border-radius: 1px 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -479,6 +543,21 @@ footer .footer-container .row .col .contact-form form .submit:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 767px) {
+  .services .service-container .service-content {
+    padding: 20px;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+  }
 }
 
 .services .service-container .service-content ul {
@@ -492,20 +571,31 @@ footer .footer-container .row .col .contact-form form .submit:hover {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 50px;
+  gap: 10px;
+}
+
+@media (max-width: 767px) {
+  .services .service-container .service-content ul {
+    margin-left: 20px;
+  }
 }
 
 .services .service-container .service-content li {
-  padding: 15px;
+  -webkit-box-flex: 40%;
+      -ms-flex: 40%;
+          flex: 40%;
+  padding: 10px;
   cursor: pointer;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
+}
+
+@media (max-width: 767px) {
+  .services .service-container .service-content li {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+  }
 }
 
 .services .service-container .service-content li:hover {
