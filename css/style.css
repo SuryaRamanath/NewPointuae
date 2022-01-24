@@ -635,6 +635,26 @@ footer .footer-container .row .col .contact-form form .submit:hover {
   gap: 50px;
 }
 
+@media (max-width: 767px) {
+  .facilities-container {
+    gap: 10px;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    overflow-x: scroll;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+
+.facilities-container::-webkit-scrollbar {
+  width: 2px;
+  display: none;
+}
+
 .facilities-container .facility {
   background-color: #fff;
   padding: 10px;
@@ -657,6 +677,14 @@ footer .footer-container .row .col .contact-form form .submit:hover {
   transition: 0.5s ease;
 }
 
+@media (max-width: 767px) {
+  .facilities-container .facility {
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+  }
+}
+
 .facilities-container .facility:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
@@ -675,5 +703,12 @@ footer .footer-container .row .col .contact-form form .submit:hover {
 
 .facilities-container .facility .content {
   font-size: 1.2rem;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .facilities-container .facility .content {
+    font-size: 18px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
