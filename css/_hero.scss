@@ -105,12 +105,21 @@
         justify-content: center;
         cursor: pointer;
         transition: 0.5s ease;
+
+        @media(max-width: 767px) {
+            width: 30px;
+            height: 30px;
+            bottom: 50px;
+        }
         &:hover{
             transform: scale(1.2);
         }
         i{
             position: relative;
             font-size: 40px;
+            @media(max-width: 767px) {
+                font-size: 20px;
+            }
         }
     }
     .slider-left-arrow{ 

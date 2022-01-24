@@ -6,9 +6,7 @@
   font-family: "Open Sans", sans-serif;
   scroll-behavior: smooth;
 }
-body{
-  color: #eee;
-}
+
 li {
     list-style: none;
 }
@@ -52,6 +50,7 @@ section{
 }
 
 .section-title{
+    margin-bottom: 40px;
     text-align: center;
     font-size:2rem; 
     font-weight:300; 
@@ -88,3 +87,4 @@ section{
 @import 'footer';
 @import 'about';
 @import 'services';
+@import 'facilities';
