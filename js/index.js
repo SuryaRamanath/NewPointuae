@@ -13,6 +13,21 @@ function fixNav() {
     }
 }
 
+const hamburger = document.querySelector(".hamburger")
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle('active')
+    document.querySelector(".nav-items").classList.toggle('mobile-display')
+})
+
+const navItems = document.querySelectorAll('.nav-items ul li')
+navItems.forEach(nav => {
+    nav.addEventListener('click', () => {
+        if(window.innerWidth <= 1140){
+            document.querySelector(".nav-items").classList.toggle('mobile-display')
+            hamburger.classList.toggle('active')
+        }
+    })
+})
 
 // SLIDER
 

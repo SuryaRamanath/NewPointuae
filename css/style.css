@@ -48,7 +48,7 @@ section {
   padding: 100px 200px;
 }
 
-@media (max-width: 1040px) {
+@media (max-width: 1140px) {
   section {
     padding: 100px 20px;
   }
@@ -56,6 +56,7 @@ section {
 
 .section-title {
   margin-bottom: 40px;
+  margin-top: 40px;
   text-align: center;
   font-size: 2rem;
   font-weight: 300;
@@ -98,15 +99,57 @@ section {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.767);
   top: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
+  padding: 0px 100px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.navbar .container {
-  max-width: 80vw;
-  margin: 0 auto;
+@media (max-width: 1140px) {
+  .navbar {
+    padding: 0 30px;
+    height: 10vh;
+    background-color: #222;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    padding: 0 10px;
+    height: 10vh;
+  }
+}
+
+.navbar img {
+  height: 100px;
+}
+
+@media (max-width: 1140px) {
+  .navbar img {
+    height: 80px;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar img {
+    height: 60px;
+  }
+}
+
+.navbar .nav-items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -117,15 +160,56 @@ section {
       -ms-flex-align: center;
           align-items: center;
   padding: 10px 0;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
-.navbar .container img {
-  height: 100px;
+.navbar .nav-items.mobile-display {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  right: 0;
+  top: 10vh;
+  width: 100vw;
+  height: 50vh;
+  background-color: #222;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
 }
 
-.navbar .container ul {
+@media (max-width: 1140px) {
+  .navbar .nav-items {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: fixed;
+    right: -100%;
+    top: -50vh;
+    width: 60vw;
+    height: 50vh;
+    background-color: #222;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+  }
+}
+
+.navbar .nav-items ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -138,7 +222,23 @@ section {
           justify-content: center;
 }
 
-.navbar .container ul a {
+@media (max-width: 1140px) {
+  .navbar .nav-items ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 1140px) {
+  .navbar .nav-items ul li {
+    padding: 20px;
+  }
+}
+
+.navbar .nav-items ul a {
   color: #fff;
   text-decoration: none;
   padding: 7px 15px;
@@ -146,9 +246,44 @@ section {
   transition: all 0.3s ease-in-out;
 }
 
-.navbar .container ul a:hover {
+.navbar .nav-items ul a:hover {
   color: #3a7dbb;
   font-weight: bold;
+}
+
+.navbar .hamburger {
+  display: none;
+}
+
+@media (max-width: 1140px) {
+  .navbar .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.navbar .hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #ffffff;
+}
+
+.navbar .hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar .hamburger.active .bar:nth-child(1) {
+  -webkit-transform: translateY(8px) rotate(45deg);
+          transform: translateY(8px) rotate(45deg);
+}
+
+.navbar .hamburger.active .bar:nth-child(3) {
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+          transform: translateY(-8px) rotate(-45deg);
 }
 
 .navbar.active {

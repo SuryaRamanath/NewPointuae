@@ -44,13 +44,14 @@ a {
 section{
     padding: 100px 200px;
 
-    @media(max-width: 1040px){
+    @media(max-width: 1140px){
         padding: 100px 20px;
     }
 }
 
 .section-title{
     margin-bottom: 40px;
+    margin-top: 40px;
     text-align: center;
     font-size:2rem; 
     font-weight:300; 
