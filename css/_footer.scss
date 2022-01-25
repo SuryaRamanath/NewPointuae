@@ -2,17 +2,12 @@ footer {
   background-color: rgb(10, 10, 7);
   width: 100%;
   bottom: 0;
-  background: linear-gradient(
-    to right,
-    black,
-    rgb(29, 88, 84),
-    
-    
-  );
+  background: black;
+  
   color: white;
   border-top-left-radius: 100px;
   border-top-right-radius: 100px;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 20px;
   text-align: center;
 
@@ -41,6 +36,18 @@ footer {
       .col {
         flex: 2;
         text-align: start;
+        margin:20px ;
+        i{
+          padding:10px;
+          background-color: rgb(58,125,187);
+          border-radius: 50%;
+          margin-right: 10px;
+          color: black;
+        }
+        h2{
+          
+          padding-bottom: 20px;
+        }
         img{
             width:100px;
             height:auto;
@@ -48,9 +55,11 @@ footer {
         }
         li {
           list-style: none;
+          padding-bottom: 10px;
         }
 
         .contact-form {
+         
           form {
             transition: all 4s ease-in-out;
 
