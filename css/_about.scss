@@ -5,6 +5,17 @@
   align-items: center;
   justify-content: center;
   background-color: #222;
+  position: relative;
+  height: 700px;
+  .about-image{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    opacity: .1;
+    height: 700px;
+    object-fit: cover;
+  }
   .section-title{
      text-align: center;
   }
