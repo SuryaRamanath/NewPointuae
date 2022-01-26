@@ -6,7 +6,7 @@
     justify-content: center;
     gap: 50px;
     @media(max-width: 767px){
-        gap: 10px;
+        gap: 5px;
         flex-wrap: nowrap;
         overflow-x: scroll;
         justify-content: start;
@@ -15,9 +15,15 @@
 
     &::-webkit-scrollbar {
         width: 2px;
-        display: none;
     }
+    &::-webkit-scrollbar-track {
+        background: #0c56b8;
+      }
       
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: #94bbee;
+      }
       
     .facility{
         width: 300px;
@@ -32,7 +38,7 @@
         cursor: pointer;
         transition: 0.5s ease;
         @media(max-width: 767px){
-            flex: 50%;
+            
         }
         &:hover{
             transform: scale(1.2);

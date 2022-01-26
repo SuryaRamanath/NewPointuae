@@ -119,6 +119,56 @@ section {
   color: #fff;
 }
 
+.scroll-down {
+  cursor: pointer;
+  z-index: 1000;
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  height: 50px;
+  width: 50px;
+  margin-left: -15px;
+  -webkit-animation: scrollDown 2s ease infinite;
+          animation: scrollDown 2s ease infinite;
+}
+
+@media (max-width: 767px) {
+  .scroll-down {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@-webkit-keyframes scrollDown {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+
+@keyframes scrollDown {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+
 .navbar {
   z-index: 1088;
   position: fixed;
@@ -739,8 +789,14 @@ footer .footer-container .row .col .contact-form form .submit:hover {
   padding: 80px;
 }
 
+@media (max-width: 1024px) {
+  .about .about-container p {
+    padding: 30px;
+  }
+}
+
 .about .about-container img {
-  width: 1800px;
+  width: 100%;
 }
 
 @media only screen and (max-width: 800px) {
@@ -914,11 +970,12 @@ footer .footer-container .row .col .contact-form form .submit:hover {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 50px;
+  /* Handle */
 }
 
 @media (max-width: 767px) {
   .facilities-container {
-    gap: 10px;
+    gap: 5px;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     overflow-x: scroll;
@@ -933,7 +990,14 @@ footer .footer-container .row .col .contact-form form .submit:hover {
 
 .facilities-container::-webkit-scrollbar {
   width: 2px;
-  display: none;
+}
+
+.facilities-container::-webkit-scrollbar-track {
+  background: #0c56b8;
+}
+
+.facilities-container::-webkit-scrollbar-thumb {
+  background: #94bbee;
 }
 
 .facilities-container .facility {
@@ -957,14 +1021,6 @@ footer .footer-container .row .col .contact-form form .submit:hover {
   cursor: pointer;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
-}
-
-@media (max-width: 767px) {
-  .facilities-container .facility {
-    -webkit-box-flex: 50%;
-        -ms-flex: 50%;
-            flex: 50%;
-  }
 }
 
 .facilities-container .facility:hover {
