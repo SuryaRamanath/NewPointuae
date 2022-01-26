@@ -56,9 +56,9 @@ section {
 
 .section-title {
   margin-bottom: 40px;
-  margin-top: 40px;
+  margin-top: 20px;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 300;
   color: #11484c;
   letter-spacing: 1px;
@@ -608,28 +608,40 @@ footer .footer-container .row .col .contact-form form .submit:hover {
   cursor: pointer;
 }
 
-.about p {
+.about .about-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  background-color: #f8f9fa;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.about .about-container p {
   color: #555;
   line-height: 30px;
   letter-spacing: 1.2px;
+  padding: 80px;
 }
 
-.about button {
-  background-color: #1d5854;
-  color: #fff;
-  border: 1px #1d5854 solid;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  padding: 20px 30px;
-  overflow: hidden;
-  margin: 10px 0;
-  position: relative;
+.about .about-container img {
+  width: 1800px;
 }
 
-.about button:hover {
-  background: transparent;
-  color: black;
+@media only screen and (max-width: 800px) {
+  .about .about-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .services {

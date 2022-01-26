@@ -1,23 +1,27 @@
 .about {
-  p {
-    color: #555;
-    line-height: 30px;
-    letter-spacing: 1.2px;
+  .about-container{
+    display: flex;
+    flex-wrap: nowrap;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) ;
+    background-color: rgb(248, 249, 250);
+    flex:1;
+    p {
+      color: #555;
+      line-height: 30px;
+      letter-spacing: 1.2px;
+      padding: 80px;
+    }
+    img{
+      width:1800px;
+    }
+
+    @media only screen and (max-width: 800px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      
+    }
   }
-  button {
-    background-color: rgb(29, 88, 84);
-    color: #fff;
-    border: 1px rgb(29, 88, 84) solid;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    padding: 20px 30px;
-    overflow: hidden;
-    margin: 10px 0;
-    position: relative;
-  }
-  button:hover {
-    background: transparent;
-    color: black;
-  }
+  
+ 
+
 }
