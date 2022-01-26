@@ -408,31 +408,31 @@ section {
 
 @-webkit-keyframes outer-top {
   0% {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
   }
   60% {
-    -webkit-transform: translatey(10%);
-            transform: translatey(10%);
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
   }
   100% {
-    -webkit-transform: none;
-            transform: none;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
 }
 
 @keyframes outer-top {
   0% {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
   }
   60% {
-    -webkit-transform: translatey(10%);
-            transform: translatey(10%);
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
   }
   100% {
-    -webkit-transform: none;
-            transform: none;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
 }
 
@@ -450,6 +450,12 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media (max-width: 767px) {
+  .hero {
+    min-height: 40vh;
+  }
 }
 
 .hero::before {
@@ -492,20 +498,23 @@ section {
 }
 
 .hero .content {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   z-index: 888;
-  width: 70%;
   margin-top: 50px;
   display: none;
 }
 
-@media (max-width: 767px) {
-  .hero .content {
-    width: 100%;
-  }
-}
-
 .hero .content.active {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .hero .content h1 {
@@ -518,7 +527,7 @@ section {
   line-height: 55px;
   margin-bottom: 40px;
   color: black;
-  background: rgba(255, 255, 255, 0.459);
+  background: rgba(255, 255, 255, 0.61);
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -527,7 +536,9 @@ section {
 
 @media (max-width: 767px) {
   .hero .content h1 {
-    font-size: 2rem;
+    font-size: 10px;
+    letter-spacing: 2px;
+    line-height: 25px;
   }
 }
 
@@ -562,6 +573,7 @@ section {
   -webkit-transform: translateY(80px);
           transform: translateY(80px);
   margin-bottom: 12px;
+  display: none;
 }
 
 .hero .slider-navigation .nav-btn {
@@ -618,7 +630,6 @@ section {
   .hero .arrow {
     width: 30px;
     height: 30px;
-    bottom: 50px;
   }
 }
 

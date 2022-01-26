@@ -14,13 +14,14 @@
 
   @keyframes outer-top {
     0% {
-      transform: translateY(-100%);
+      transform: translateY(-200%);
     }
     60% {
-        transform: translatey(10%);
+        transform: translateY(50%);
     }
+    
     100% {
-      transform: none;
+      transform: scale(1.2);
     }
   }
   
@@ -33,6 +34,9 @@
     justify-content: center;
     flex-direction: column;
 
+    @media(max-width: 767px) {
+        min-height: 40vh;
+    }
     &::before{
         z-index: 777;
         content: '';
@@ -65,21 +69,25 @@
     }
 
     .content{
-       
-        
+        position: absolute;
+        bottom: 0;
+        right: 50%;
+        transform: translateX(50%);
+        // transform: skewX(-20deg);
+        width: fit-content;
         z-index: 888;
-        width: 70%;
         margin-top: 50px;
         display: none;
         @media(max-width: 767px) {
-            width: 100%;
         }
         &.active{
-            display: block;
+            display: flex;
 
         }
+       
 
         h1{
+           
             animation: outer-top 1s 1s ease both;
             font-size: 2em;
             font-weight: 900;
@@ -88,12 +96,14 @@
             line-height: 55px;
             margin-bottom: 40px;
             color: rgb(0, 0, 0);
-            background: rgba(255, 255, 255, 0.459);
+            background: rgba(255, 255, 255, 0.61);
             width:fit-content;
             padding: 10px;
             
             @media(max-width: 767px) {
-                font-size: 2rem;
+                font-size: 10px;
+                letter-spacing: 2px;
+                line-height: 25px;
             }
         }
         p{
@@ -116,7 +126,7 @@
         align-items: center;
         transform: translateY(80px);
         margin-bottom: 12px;
-
+        display: none;
         .nav-btn{
             width: 12px;
             height: 12px;
@@ -156,7 +166,7 @@
         @media(max-width: 767px) {
             width: 30px;
             height: 30px;
-            bottom: 50px;
+            // bottom: 50px;
         }
         &:hover{
             transform: scale(1.2);
