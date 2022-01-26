@@ -439,7 +439,7 @@ section {
 .hero {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 60vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
