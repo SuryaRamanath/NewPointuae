@@ -79,7 +79,9 @@ section{
   font-weight: 700;
   position: relative;
   padding-top: 30px;
-
+  &.light{
+    color: #ccc;
+  }
   &:before{
     content: '';
     box-sizing: border-box;
