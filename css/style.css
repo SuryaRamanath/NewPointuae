@@ -576,6 +576,18 @@ footer .footer-container .row .col .contact-form form .form-control {
   font-size: 12px;
 }
 
+@media only screen and (max-width: 500px) {
+  footer .footer-container .row .col .contact-form form .form-control {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  footer .footer-container .row .col .contact-form form .form-control {
+    width: 200px;
+  }
+}
+
 footer .footer-container .row .col .contact-form form input {
   height: 45px;
 }

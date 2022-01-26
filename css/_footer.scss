@@ -71,6 +71,19 @@ footer {
               border-bottom: 1px solid grey;
               color: #fff;
               font-size: 12px;
+              @media only screen and (max-width: 500px) {
+  
+                width: 300px;
+                
+              
+            }
+            @media only screen and (max-width: 400px) {
+  
+              width: 200px;
+              
+            
+          }
+              
             }
             input {
               height: 45px;
@@ -90,8 +103,11 @@ footer {
               cursor: pointer;
             }
           }
+
+          
         }
       }
     }
   }
 }
+
