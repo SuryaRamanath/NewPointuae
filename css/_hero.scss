@@ -81,13 +81,17 @@
 
         h1{
             animation: outer-top 1s 1s ease both;
-            font-size: 3em;
+            font-size: 2em;
             font-weight: 900;
             text-transform: uppercase;
-            letter-spacing: 5px;
-            line-height: 75px;
+            letter-spacing: 2px;
+            line-height: 55px;
             margin-bottom: 40px;
-            color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            background: rgba(255, 255, 255, 0.459);
+            width:fit-content;
+            padding: 10px;
+            
             @media(max-width: 767px) {
                 font-size: 2rem;
             }

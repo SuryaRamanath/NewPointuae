@@ -511,13 +511,18 @@ section {
 .hero .content h1 {
   -webkit-animation: outer-top 1s 1s ease both;
           animation: outer-top 1s 1s ease both;
-  font-size: 3em;
+  font-size: 2em;
   font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 5px;
-  line-height: 75px;
+  letter-spacing: 2px;
+  line-height: 55px;
   margin-bottom: 40px;
-  color: white;
+  color: black;
+  background: rgba(255, 255, 255, 0.459);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px;
 }
 
 @media (max-width: 767px) {
