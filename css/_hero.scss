@@ -17,11 +17,11 @@
       transform: translateY(-200%);
     }
     60% {
-        transform: translateY(50%);
+        transform: translateY(10%);
     }
     
     100% {
-      transform: scale(1.2);
+      transform: none;
     }
   }
   
@@ -29,7 +29,7 @@
 .hero{
     position: relative;
     width: 100%;
-    min-height: 60vh;
+    min-height: 70vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -70,11 +70,10 @@
 
     .content{
         position: absolute;
-        bottom: 0;
+        bottom: -40px;
         right: 50%;
         transform: translateX(50%);
-        // transform: skewX(-20deg);
-        width: fit-content;
+        width: 100%;
         z-index: 888;
         margin-top: 50px;
         display: none;
@@ -87,7 +86,7 @@
        
 
         h1{
-           
+            text-align: center;
             animation: outer-top 1s 1s ease both;
             font-size: 2em;
             font-weight: 900;
@@ -95,10 +94,10 @@
             letter-spacing: 2px;
             line-height: 55px;
             margin-bottom: 40px;
-            color: rgb(0, 0, 0);
-            background: rgba(255, 255, 255, 0.61);
-            width:fit-content;
+            color: rgb(255, 255, 255);
+            background: rgba(0, 0, 0, 0.377);
             padding: 10px;
+            width: 100%;
             
             @media(max-width: 767px) {
                 font-size: 10px;
