@@ -69,7 +69,12 @@ section{
 //     }
 // }
 
-
+.section-title-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 .section-title {
   margin-bottom: 40px;
   margin-top: 20px;
