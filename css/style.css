@@ -803,7 +803,7 @@ footer .footer-container .row .col .contact-form form .submit:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #222;
+  background-color: black;
   position: relative;
   min-height: 800px;
 }
