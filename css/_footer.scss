@@ -27,6 +27,7 @@ footer {
       width: 80vw;
       margin: auto;
       display: flex;
+      
       flex-wrap: wrap;
       align-items: flex-start;
       justify-content: space-between;
@@ -34,7 +35,6 @@ footer {
      
 
       .col {
-        flex: 2;
         text-align: start;
         margin:20px ;
         i{
