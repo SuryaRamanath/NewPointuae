@@ -715,11 +715,9 @@ footer .footer-container .row {
 }
 
 footer .footer-container .row .col {
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
   text-align: start;
-  margin: 20px;
+  min-width: 100px;
+  margin: 5px;
 }
 
 footer .footer-container .row .col i {

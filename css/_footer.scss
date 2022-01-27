@@ -36,7 +36,8 @@ footer {
 
       .col {
         text-align: start;
-        margin:20px ;
+        min-width: 100px;
+        margin:5px ;
         i{
           padding:10px;
           background-color: rgb(58,125,187);
