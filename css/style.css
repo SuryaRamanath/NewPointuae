@@ -178,7 +178,7 @@ section {
 .navbar {
   z-index: 1088;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.767);
+  background-color: black;
   top: 0;
   width: 100%;
   padding: 0px 100px;
@@ -1091,7 +1091,7 @@ footer .footer-container .row .col .contact-form form .submit:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 50px;
+  gap: 10px;
   /* Handle */
 }
 
