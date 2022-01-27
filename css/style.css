@@ -865,13 +865,18 @@ footer .footer-container .row .col .contact-form form .submit:hover {
 }
 
 .about .about-container blockquote {
-  font-weight: 100;
   max-width: 600px;
   line-height: 1.4;
   position: relative;
   margin: 0;
   color: #fff;
   font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  .about .about-container blockquote {
+    max-width: 80%;
+  }
 }
 
 .about .about-container blockquote:before,
@@ -886,7 +891,7 @@ footer .footer-container .row .col .contact-form form .submit:hover {
 @media (max-width: 767px) {
   .about .about-container blockquote:before,
   .about .about-container blockquote:after {
-    font-size: 4rem;
+    font-size: 2rem;
   }
 }
 
@@ -898,7 +903,8 @@ footer .footer-container .row .col .contact-form form .submit:hover {
 
 @media (max-width: 767px) {
   .about .about-container blockquote:before {
-    left: -1.5rem;
+    left: -1rem;
+    top: -1rem;
   }
 }
 
@@ -910,7 +916,8 @@ footer .footer-container .row .col .contact-form form .submit:hover {
 
 @media (max-width: 767px) {
   .about .about-container blockquote:after {
-    right: -1.5rem;
+    right: -1rem;
+    top: -1rem;
   }
 }
 
