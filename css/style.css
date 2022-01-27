@@ -807,7 +807,7 @@ footer .footer-container .row .col .contact-form form .submit:hover {
           justify-content: center;
   background-color: #222;
   position: relative;
-  height: 700px;
+  min-height: 800px;
 }
 
 .about .about-image {
@@ -816,7 +816,7 @@ footer .footer-container .row .col .contact-form form .submit:hover {
   left: 0;
   width: 100%;
   opacity: .1;
-  height: 700px;
+  height: 800px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -847,6 +847,8 @@ footer .footer-container .row .col .contact-form form .submit:hover {
   line-height: 30px;
   letter-spacing: 1.2px;
   padding: 80px;
+  text-align: center;
+  text-justify: newspaper;
 }
 
 @media (max-width: 1024px) {
@@ -855,18 +857,72 @@ footer .footer-container .row .col .contact-form form .submit:hover {
   }
 }
 
+@media (max-width: 767px) {
+  .about .about-container .content {
+    padding: 10px;
+    font-size: 16px;
+  }
+}
+
+.about .about-container blockquote {
+  font-weight: 100;
+  max-width: 600px;
+  line-height: 1.4;
+  position: relative;
+  margin: 0;
+  color: #fff;
+  font-weight: 600;
+}
+
+.about .about-container blockquote:before,
+.about .about-container blockquote:after {
+  position: absolute;
+  font-size: 5rem;
+  width: 1rem;
+  height: 1rem;
+  color: #4081ec;
+}
+
+@media (max-width: 767px) {
+  .about .about-container blockquote:before,
+  .about .about-container blockquote:after {
+    font-size: 4rem;
+  }
+}
+
+.about .about-container blockquote:before {
+  content: '“';
+  left: -3rem;
+  top: -2rem;
+}
+
+@media (max-width: 767px) {
+  .about .about-container blockquote:before {
+    left: -1.5rem;
+  }
+}
+
+.about .about-container blockquote:after {
+  content: '”';
+  right: -3rem;
+  top: -2rem;
+}
+
+@media (max-width: 767px) {
+  .about .about-container blockquote:after {
+    right: -1.5rem;
+  }
+}
+
 .about .about-container .slogan {
   text-transform: uppercase;
 }
 
-@media only screen and (max-width: 800px) {
-  .about .about-container {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+@media (max-width: 767px) {
+  .about .about-container .slogan {
+    margin-top: 50px;
+    font-size: 18px;
+    text-align: center;
   }
 }
 
